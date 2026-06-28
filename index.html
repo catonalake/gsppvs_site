@@ -47,7 +47,7 @@
     .hero .tagline {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       color: #c9d8e8;
-      max-width: 520px;
+      max-width: 680px;
       margin: 0 auto;
       line-height: 1.6;
     }
@@ -62,6 +62,7 @@
       max-width: 760px;
       margin: 0 auto;
       padding: 52px 24px;
+      overflow: hidden;
     }
 
     section + section {
@@ -140,6 +141,36 @@
 
     .contact-list a:hover { color: #cc2936; }
 
+    /* ── Chapter photo ── */
+    .chapter-photo {
+      float: right;
+      margin: 4px 0 16px 28px;
+      text-align: center;
+      max-width: 160px;
+    }
+
+    .chapter-photo img {
+      width: 100%;
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    .chapter-photo figcaption {
+      margin-top: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      color: #6b7f99;
+      font-style: italic;
+    }
+
+    @media (max-width: 420px) {
+      .chapter-photo {
+        float: none;
+        margin: 20px auto 0;
+        max-width: 140px;
+      }
+    }
+
     /* ── Footer ── */
     footer {
       background: #1a2744;
@@ -169,6 +200,10 @@
   <!-- About -->
   <section>
     <h2>About <span class="accent">Our Chapter</span></h2>
+    <figure class="chapter-photo">
+      <img src="assets/gsp_pvs_leaders.png" alt="Greater GSP Pray Vote Stand Chapter leaders">
+      <figcaption>Left to right:<br>Dr. Panisha Stigger, Co-Chair<br>Joe Dill, Prayer Leader<br>Cathleen Griffeth, Chair</figcaption>
+    </figure>
     <p>
       The Greater Greenville-Spartanburg SC Pray Vote Stand Chapter equips believers in the Upstate South Carolina
       community to engage locally, prayerfully, and biblically — helping to revive true freedom in our nation.
@@ -206,7 +241,7 @@
   <!-- Footer -->
   <footer>
     <p class="text-white" >Greater Greenville-Spartanburg SC Pray Vote Stand Chapter</p>
-    <p  class="text-white">An initiative of <a href="https://frc.org" target="_blank" rel="noopener">Family Research Council</a></p>
+    <p  class="text-white">An initiative of <a href="https://frc.org/chapters" target="_blank" rel="noopener">Family Research Council</a></p>
   </footer>
 
 </body>
