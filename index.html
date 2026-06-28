@@ -62,6 +62,7 @@
       max-width: 760px;
       margin: 0 auto;
       padding: 52px 24px;
+      overflow: hidden;
     }
 
     section + section {
@@ -140,6 +141,36 @@
 
     .contact-list a:hover { color: #cc2936; }
 
+    /* ── Chapter photo ── */
+    .chapter-photo {
+      float: right;
+      margin: 4px 0 16px 28px;
+      text-align: center;
+      max-width: 160px;
+    }
+
+    .chapter-photo img {
+      width: 100%;
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    .chapter-photo figcaption {
+      margin-top: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      color: #6b7f99;
+      font-style: italic;
+    }
+
+    @media (max-width: 420px) {
+      .chapter-photo {
+        float: none;
+        margin: 20px auto 0;
+        max-width: 140px;
+      }
+    }
+
     /* ── Footer ── */
     footer {
       background: #1a2744;
@@ -169,6 +200,10 @@
   <!-- About -->
   <section>
     <h2>About <span class="accent">Our Chapter</span></h2>
+    <figure class="chapter-photo">
+      <img src="assets/gsp_pvs_leaders.png" alt="Greater GSP Pray Vote Stand Chapter leaders">
+      <figcaption>Greater Greenville-Spartanburg SC Pray Vote Stand Chapter</figcaption>
+    </figure>
     <p>
       The Greater Greenville-Spartanburg SC Pray Vote Stand Chapter equips believers in the Upstate South Carolina
       community to engage locally, prayerfully, and biblically — helping to revive true freedom in our nation.
