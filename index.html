@@ -157,16 +157,23 @@
 
     .contact-list a:hover { color: #cc2936; }
 
-    /* ── Chapter photo ── */
+    /* ── About row (grid) ── */
+    .about-row {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 28px;
+      align-items: start;
+    }
+
     .chapter-photo {
-      float: right;
-      margin: 4px 0 16px 28px;
       text-align: center;
-      max-width: 160px;
+      margin: 0;
     }
 
     .chapter-photo img {
       width: 100%;
+      height: 231px;
+      object-fit: cover;
       border-radius: 3px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
@@ -179,11 +186,14 @@
       font-style: italic;
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 600px) {
+      .about-row {
+        grid-template-columns: 1fr;
+      }
+
       .chapter-photo {
-        float: none;
-        margin: 20px auto 0;
-        max-width: 140px;
+        max-width: 280px;
+        margin: 0 auto;
       }
     }
 
@@ -216,19 +226,23 @@
   <!-- About -->
   <section>
     <h2>About <span class="accent">Our Chapter</span></h2>
-    <figure class="chapter-photo">
-      <img src="assets/gsp_pvs_leaders.png" alt="Greater GSP Pray Vote Stand Chapter leaders">
-      <figcaption>Left to right:<br>Dr. Panisha Stigger, Co-Chair<br>Joe Dill, Prayer Leader<br>Cathleen Griffeth, Chair</figcaption>
-    </figure>
-    <p>
-      The Greater Greenville-Spartanburg SC Pray Vote Stand Chapter equips believers in the Upstate South Carolina
-      community to engage locally, prayerfully, and biblically — helping to revive true freedom in our nation.
-    </p>
-    <p>
-      We pray for our communities and the leaders who serve them — from city councils and county government
-      to school boards, libraries, and state legislators. We stand for our values at the ballot box and build
-      fellowship with Christians who believe faith belongs in the public square.
-    </p>
+    <div class="about-row">
+      <div>
+        <p>
+          The Greater Greenville-Spartanburg SC Pray Vote Stand Chapter equips believers in the Upstate South Carolina
+          community to engage locally, prayerfully, and biblically — helping to revive true freedom in our nation.
+        </p>
+        <p>
+          We pray for our communities and the leaders who serve them — from city councils and county government
+          to school boards, libraries, and state legislators. We stand for our values at the ballot box and build
+          fellowship with Christians who believe faith belongs in the public square.
+        </p>
+      </div>
+      <figure class="chapter-photo">
+        <img src="assets/gsp_pvs_leaders.png" alt="Greater GSP Pray Vote Stand Chapter leaders">
+        <figcaption>Left to right:<br>Dr. Panisha Stigger, Co-Chair<br>Joe Dill, Prayer Leader<br>Cathleen Griffeth, Chair</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- National Vision -->
